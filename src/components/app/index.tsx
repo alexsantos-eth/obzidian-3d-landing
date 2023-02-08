@@ -28,7 +28,7 @@ const App: React.FC = () => {
           <Character />
           <Environment files="/models/skybox/bosque.hdr" background />
         </Suspense>
-        <OrbitControls autoRotate />
+        <OrbitControls />
       </Canvas>
     </main>
   );
