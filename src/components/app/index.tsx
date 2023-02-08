@@ -24,7 +24,7 @@ const App: React.FC = () => {
         }}
         style={{
           background: "#fff",
-          height: "92vh",
+          height: "calc(100vh - 50px)",
           width: "100vw",
         }}
       >
