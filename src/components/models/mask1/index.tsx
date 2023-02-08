@@ -5,15 +5,15 @@ import { BufferGeometry, Mesh, TextureLoader } from "three";
 import { useFBX } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
 
-const Character: React.FC = (props) => {
-  const fbx = useFBX("/models/mascara/MascaraCompleta1_Low.fbx");
+const Mask: React.FC = () => {
+  const fbx = useFBX("/models/mascara1/Mascara3_Low2.fbx");
   const [colorMap, displacementMap, normalMap, roughnessMap] = useLoader(
     TextureLoader,
     [
-      "/models/mascara/MascaraCompleta1_Low_Mascara_BaseColor.1001.png",
-      "/models/mascara/MascaraCompleta1_Low_Mascara_Height.1001.png",
-      "/models/mascara/MascaraCompleta1_Low_Mascara_Normal.1001.png",
-      "/models/mascara/MascaraCompleta1_Low_Mascara_Roughness.1001.png",
+      "/models/mascara1/Mascara3_Low2_Mascara3_BaseColor.1001.png",
+      "/models/mascara1/Mascara3_Low2_Mascara3_Height.1001.png",
+      "/models/mascara1/Mascara3_Low2_Mascara3_Normal.1001.png",
+      "/models/mascara1/Mascara3_Low2_Mascara3_Roughness.1001.png",
     ]
   );
 
@@ -26,7 +26,7 @@ const Character: React.FC = (props) => {
   });
 
   return (
-    <group position={[0, -6.8, 0]} scale={[0.039, 0.039, 0.039]}>
+    <group position={[0, -6.4, 0]} scale={[0.039, 0.039, 0.039]}>
       {geometries.map((geometry, index) => (
         <mesh key={index} geometry={geometry}>
           <meshStandardMaterial
@@ -41,5 +41,5 @@ const Character: React.FC = (props) => {
   );
 };
 
-useFBX.preload("/models/mascara/MascaraCompleta1_Low.fbx");
-export default Character;
+useFBX.preload("/models/mascara1/Mascara3_Low2.fbx");
+export default Mask;
