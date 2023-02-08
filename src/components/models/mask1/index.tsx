@@ -26,7 +26,7 @@ const Mask: React.FC = () => {
   });
 
   return (
-    <group position={[0, -6.4, 0]} scale={[0.039, 0.039, 0.039]}>
+    <group position={[0, -24, 0]} scale={[0.15, 0.15, 0.15]}>
       {geometries.map((geometry, index) => (
         <mesh key={index} geometry={geometry}>
           <meshStandardMaterial
